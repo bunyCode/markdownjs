@@ -1,5 +1,5 @@
 {
-  "name": "md-parcing",
+  "name": "markdownjs",
   "version": "1.0.0",
   "description": "This is a markdown parser",
   "main": "src/index.js",
