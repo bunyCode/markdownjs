@@ -1,5 +1,5 @@
 const regexBlockquote = /\>(.+)/g;
-const regexImg = /\!\[(.+)\]\((.+)\)/g
+const regexImg = /\!\[(.+)\]\((.+)\)/g;
 const regexH6 = /[\#]{6} (.+)/g;
 const regexH5 = /[\#]{5} (.+)/g;
 const regexH4 = /[\#]{4} (.+)/g;
@@ -13,7 +13,7 @@ const regexI = /[\_]{1}(.+)[\_]{1}/g;
 const regexI2 = /[\*]{1}(.+)[\*]{1}/g;
 const regexCode = /[\`](.+)[\`]/g;
 const regexCode2 = /[\`]{3}(.+)[\`]{3}/g;
-const regexLink = /\[(.+)\]\((.+)\)/g
+const regexLink = /\[(.+)\]\((.+)\)/g;
 
 function parse(markdown) {
   return markdown
@@ -32,9 +32,7 @@ function parse(markdown) {
     .replace(regexCode2, "<code>$1</code>")
     .replace(regexCode, "<code>$1</code>")
     .replace(regexImg, "<img src='$2' alt='$1'/>")
-    .replace(regexLink, "<a href='$2'>$1</a>")
-
+    .replace(regexLink, "<a href='$2'>$1</a>");
 }
-
 
 export default parse;
